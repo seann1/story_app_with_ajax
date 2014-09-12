@@ -16,3 +16,28 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#story-title {
+  border-width: 1px;
+  border-style: solid;
+  border-color: gray;
+  border-radius: 0px 20px 0px;
+  padding: 10px;
+  color: white;
+  background-color: #737373;
+  width: 75%;
+}
+
+#story-content {
+  border-width: 1px;
+  border-style: solid;
+  border-color: gray;
+  padding: 10px;
+  background-color: white;
+  width: 75%;
+  border-radius: 20px 0px 20px 0px;
+}
+
+body {
+  background-color: #9C9C9C;
+}

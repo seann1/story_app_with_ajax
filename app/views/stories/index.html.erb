@@ -1,4 +1,7 @@
-<%= @user.stories.each do |story| %>
-  <p><%= story.title %></p>
+<% @user.stories.each do |story| %>
+  <h2 id="story-title"><%= story.title %></h2>
+  <div id="story-content">
   <p><%= story.content %></p>
+  <%= link_to "Comment", new_story_comment_path(@story) %>
+  </div>
 <% end %>
