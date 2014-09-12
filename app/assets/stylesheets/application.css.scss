@@ -18,14 +18,15 @@
 @import "bootstrap";
 
 #story-title {
-  border-width: 1px;
+  border-width: 4px;
   border-style: solid;
-  border-color: gray;
+  border-color: #008765;
   border-radius: 0px 20px 0px;
   padding: 10px;
-  color: white;
+  color: #D0DB00;
   background-color: #737373;
   width: 75%;
+  box-shadow: 3px 5px 5px #888888;
 }
 
 #story-content {
@@ -36,8 +37,53 @@
   background-color: white;
   width: 75%;
   border-radius: 20px 0px 20px 0px;
+  box-shadow: 3px 5px 5px #888888;
+}
+
+#comment-content {
+  border-width: 5px;
+  border-style: solid;
+  border-color: gray;
+  padding: 10px;
+  background-color: white;
+  width: 50%;
+  border-radius: 20px 0px 20px 0px;
+  margin-top: 10px;
+  box-shadow: 3px 5px 5px #888888;
+
 }
 
 body {
   background-color: #9C9C9C;
 }
+
+.menu-item {
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  background-color: #DBFFEC;
+  border-color: black;
+  color: black;
+  box-shadow: 3px 5px 5px #888888;
+}
+
+.notice {
+  background-color: #E6C700;
+  padding: 20px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #00A150;
+  border-radius: 10px;
+  opacity: 70%;
+}
+
+.textbox {
+  box-shadow: 3px 5px 5px #888888;
+  border-radius: 20px 0px 35px 0px;
+  height: 100px;
+  margin-top: 10px;
+  width: 50%;
+  padding: 5px;
+
+}
+

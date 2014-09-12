@@ -11,6 +11,10 @@
 <div class="container">
   <br>
   <br>
+  <%= flash[:alert] %>
+<%= flash[:notice] %>
+<br>
+
   <%= link_to "Home", root_path, { :class=>"btn btn-success" } %>
   <% if current_user %>
     Logged in as <%= current_user.email %>.

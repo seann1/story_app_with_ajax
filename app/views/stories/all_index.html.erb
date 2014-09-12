@@ -1,0 +1,9 @@
+<% @stories.each do |story| %>
+  <h2 id="story-title"><%= story.title %></h2>
+  <div id="story-content">
+  <p><%= story.content %></p>
+  <% @user = User.find_by_id(story.user_id) %>
+  <p>By <%= @user.email %></p>
+  <%= link_to "view", story_path({ :id => story.id}) %>
+  </div>
+<% end %>

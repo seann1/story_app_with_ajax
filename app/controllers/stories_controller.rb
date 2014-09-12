@@ -1,8 +1,16 @@
 class StoriesController < ApplicationController
 
   def index
+    if params[:user_id] == nil
     @stories = Story.all
+    render('stories/all_index.html.erb')
+    else
+    # @stories = Story.all
+    # @stories.each do |story|
+    #   @user = Story.find(story.user_id)
+    # end
     @user = User.find(params[:user_id])
+    end
   end
 
   def new
@@ -25,6 +33,29 @@ class StoriesController < ApplicationController
       render 'new'
     end
   end
+
+  def edit
+    @story = Story.find(params[:id])
+  end
+
+  def update
+    @story = Story.find(params[:id])
+    @user = User.find(current_user)
+    if @story.update(story_params)
+    flash[:notice] = "Your story has been updated"
+    redirect_to root_path
+    else
+      redirect_to edit_user_story_path({:user_id => @user.id, :id => @story.id})
+    end
+  end
+
+  def destroy
+    @story = Story.find(params[:id])
+    @story.destroy
+    flash[:notice] = "Your story has been deleted"
+    redirect_to root_path
+  end
+
 
   private
   def story_params

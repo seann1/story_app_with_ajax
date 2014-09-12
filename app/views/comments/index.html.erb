@@ -1,0 +1,13 @@
+<h2 id="story-title"><%= @story.title %></h2>
+<div id="story-content">
+<p><%= @story.content %></p>
+</div>
+
+<% @story.comments.each do |comment| %>
+
+<div id="comment-content">
+<p><%= comment.content %></p>
+<% @user = User.find_by_id(comment.user_id) %>
+<p><%= @user.email %> </p>
+</div>
+<% end %>

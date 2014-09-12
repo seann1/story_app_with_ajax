@@ -1,7 +1,9 @@
 <%= form_for [@story, @comment] do |f| %>
 <div class="form-group">
-  <%= f.label "Content" %>
-  <%= f.text_area :content %>
+  <br>
+  <%= f.label "Message" %>
+  <br>
+  <%= f.text_area :content, class: "textbox"%>
 </div>
 <%= f.hidden_field :user_id, :value => current_user.id %>
 <%= f.hidden_field :story_id, :value => @story.id %>

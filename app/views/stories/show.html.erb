@@ -3,5 +3,9 @@
   <div id="story-content">
   <p><%= @story.content %></p>
   <%= link_to "Comment", new_story_comment_path({ :story_id => @story.id }) %>
+  <%= link_to "Edit", edit_user_story_path({ :user_id => @story.user_id, :story_id => @story.id }) %>
+  <%= link_to "Delete", user_story_path({ :user_id => @story.user_id, :id => @story.id }),
+                        :data => {:confirm => "You sure?",
+                        :method => "delete"} %>
   </div>
 
