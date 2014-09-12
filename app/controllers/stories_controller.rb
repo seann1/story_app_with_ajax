@@ -10,6 +10,11 @@ class StoriesController < ApplicationController
     @user = User.find(params[:user_id])
   end
 
+  def show
+    @user = User.find(current_user)
+    @story = Story.find(params[:id])
+  end
+
   def create
     @user = User.find(params[:user_id])
     @story = Story.create(story_params)

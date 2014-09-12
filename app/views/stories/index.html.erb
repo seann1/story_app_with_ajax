@@ -2,6 +2,6 @@
   <h2 id="story-title"><%= story.title %></h2>
   <div id="story-content">
   <p><%= story.content %></p>
-  <%= link_to "Comment", new_story_comment_path(@story) %>
+  <%= link_to "view", user_story_path({:user_id => @user.id, :id => story.id}) %>
   </div>
 <% end %>

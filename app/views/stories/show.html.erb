@@ -1,0 +1,7 @@
+
+  <h2 id="story-title"><%= @story.title %></h2>
+  <div id="story-content">
+  <p><%= @story.content %></p>
+  <%= link_to "Comment", new_story_comment_path({ :story_id => @story.id }) %>
+  </div>
+
