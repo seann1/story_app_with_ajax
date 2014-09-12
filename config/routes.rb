@@ -5,4 +5,14 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sessions
+  
+  resources :stories do
+    resources :comments
+  end
+
+  resources :users do
+    resources :stories
+  end
+  
+  root :to => 'users#index'
 end

@@ -1,0 +1,4 @@
+<h1> Welcome <%= current_user.email %> </h1>
+
+<%= link_to "Add a story", new_user_story_path(current_user) %>
+<%= link_to "My stories", user_stories_path(current_user) %>
