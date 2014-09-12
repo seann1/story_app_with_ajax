@@ -7,7 +7,7 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'bcrypt-ruby', '~> 3.1.7'
+gem 'bcrypt-ruby'
 
 group :development do
   gem 'better_errors'
