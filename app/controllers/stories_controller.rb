@@ -28,6 +28,10 @@ class StoriesController < ApplicationController
     @story = Story.create(story_params)
     if @story.valid?
       flash[:notice] = "Your story has been added."
+      respond_to do |format|
+        format.html { redirect_to root_url }
+        format.js
+      end
       redirect_to root_path
     else
       render 'new'

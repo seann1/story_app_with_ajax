@@ -1,4 +1,4 @@
-<%= form_for [@user, @story] do |f| %>
+<%= form_for [@user, @story], html: { id: "story", class: "form"}, remote: true do |f| %>
 <div class="form-group">
   <%= f.label "Title" %>
   <%= f.text_field :title, class: "form-control"%>
